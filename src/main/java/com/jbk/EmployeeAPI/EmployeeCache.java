@@ -22,7 +22,7 @@ public class EmployeeCache {
     {
         List<Employee> empList = repo.findAll();
 
-        List<Employee> sortedList = empList.stream()
+        List<Employee> empListByAddress = empList.stream()
                                         .filter(employee -> employee.geteAddress().equals("Pune"))
                                         .collect(Collectors.toList());
 
